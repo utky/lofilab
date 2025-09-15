@@ -1,0 +1,23 @@
+{
+  "name": "Terraform",
+  "build": { "dockerfile": "Dockerfile", "context": ".." },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "mounts": [
+    "source=devcontainer-config,target=/opt/vscode/config,type=volume"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "HashiCorp.terraform"
+      ]
+    }
+  },
+  "containerEnv": {
+    "GOOGLE_CLOUD_PROJECT": "lofilab",
+    "GOOGLE_CLOUD_LOCATION": "asia-northeast1"
+  },
+  "postCreateCommand": "ln -s /opt/vscode/config/gcloud /home/vscode/.config/gcloud && /bin/sh .devcontainer/install-dependencies.sh",
+  "remoteUser": "vscode"
+}
