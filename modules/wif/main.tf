@@ -17,9 +17,7 @@ resource "google_iam_workload_identity_pool_provider" "github_provider" {
     "attribute.repository" = "assertion.repository"
   }
   attribute_condition = <<EOT
-    assertion.repository_owner == "utky" &&
-    assertion.ref == "refs/heads/main" &&
-    assertion.ref_type == "branch"
+    assertion.repository_owner == "utky"
 EOT
 
   oidc {
