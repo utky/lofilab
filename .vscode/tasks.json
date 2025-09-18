@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "tofu plan",
+      "type": "shell",
+      "command": "tofu -chdir=environments/production/ plan",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "tofu apply",
+      "type": "shell",
+      "command": "tofu -chdir=environments/production/ apply",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
