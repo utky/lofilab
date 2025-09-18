@@ -16,7 +16,7 @@
   },
   "containerEnv": {
     "GOOGLE_CLOUD_PROJECT": "lofilab",
-    "GOOGLE_CLOUD_LOCATION": "asia-northeast1"
+    "GOOGLE_CLOUD_LOCATION": "global"
   },
   "postCreateCommand": "ln -s /opt/vscode/config/gcloud /home/vscode/.config/gcloud && /bin/sh .devcontainer/install-dependencies.sh",
   "remoteUser": "vscode"
