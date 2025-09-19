@@ -10,6 +10,12 @@ variable "region" {
 }
 
 variable "github_repos" {
+  description = "A list of GitHub repositories in the format of <owner>/<repository>"
   type        = list(string)
-  description = "The GitHub repositories in the format 'owner/repo'."
+}
+
+variable "repository_id" {
+  description = "The ID of the Artifact Registry repository."
+  type        = string
+  default     = "utky-applications"
 }

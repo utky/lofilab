@@ -28,3 +28,10 @@ module "wif" {
   project_id  = var.project_id
   github_repos = var.github_repos
 }
+
+module "repository" {
+  source        = "../../modules/repository"
+  project_id    = var.project_id
+  location      = var.region
+  repository_id = var.repository_id
+}
