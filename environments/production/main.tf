@@ -3,7 +3,7 @@ terraform {
 
   required_providers {
     google = {
-      source  = "hashicorp/google"
+      source = "hashicorp/google"
     }
   }
 
@@ -24,8 +24,8 @@ provider "google" {
 }
 
 module "wif" {
-  source      = "../../modules/wif"
-  project_id  = var.project_id
+  source       = "../../modules/wif"
+  project_id   = var.project_id
   github_repos = var.github_repos
 }
 
@@ -34,4 +34,9 @@ module "repository" {
   project_id    = var.project_id
   location      = var.region
   repository_id = var.repository_id
+}
+
+module "dns" {
+  source     = "../../modules/dns"
+  project_id = var.project_id
 }
