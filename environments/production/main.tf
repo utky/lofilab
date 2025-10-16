@@ -40,3 +40,8 @@ module "dns" {
   source     = "../../modules/dns"
   project_id = var.project_id
 }
+
+module "service_api" {
+  source     = "../../modules/service_api"
+  project_id = var.project_id
+}

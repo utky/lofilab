@@ -18,6 +18,8 @@ variable "service_account_roles" {
   type        = list(string)
   description = "A list of roles to grant to the service account."
   default = [
-    "roles/editor" # Start with a broad role, can be refined later
+    "roles/editor",
+    "roles/run.admin",
+    "roles/iap.admin"
   ]
 }

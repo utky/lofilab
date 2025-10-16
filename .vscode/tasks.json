@@ -4,7 +4,7 @@
     {
       "label": "tofu plan",
       "type": "shell",
-      "command": "tofu -chdir=environments/production/ plan",
+      "command": "tofu -chdir=environments/production init; tofu -chdir=environments/production/ plan",
       "group": {
         "kind": "build",
         "isDefault": true
@@ -14,7 +14,7 @@
     {
       "label": "tofu apply",
       "type": "shell",
-      "command": "tofu -chdir=environments/production/ apply",
+      "command": "tofu -chdir=environments/production init; tofu -chdir=environments/production/ apply -auto-approve",
       "group": "build",
       "problemMatcher": []
     }
