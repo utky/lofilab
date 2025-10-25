@@ -20,6 +20,8 @@ variable "service_account_roles" {
   default = [
     "roles/editor",
     "roles/run.admin",
-    "roles/iap.admin"
+    "roles/iap.admin",
+    "roles/iam.securityAdmin",
+    "roles/secretmanager.admin",
   ]
 }
