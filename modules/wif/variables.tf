@@ -23,5 +23,6 @@ variable "service_account_roles" {
     "roles/iap.admin",
     "roles/iam.securityAdmin",
     "roles/secretmanager.admin",
+    "roles/bigquery.admin"
   ]
 }
