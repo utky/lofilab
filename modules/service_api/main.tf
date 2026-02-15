@@ -19,6 +19,12 @@ resource "google_project_service" "main" {
     "dns.googleapis.com",
     "aiplatform.googleapis.com",
     "iam.googleapis.com",
+    "workflows.googleapis.com",
+    "cloudscheduler.googleapis.com",
+    "bigquery.googleapis.com",
+    "bigqueryconnection.googleapis.com",
+    "monitoring.googleapis.com",
+    "documentai.googleapis.com"
   ])
   service = each.key
 
