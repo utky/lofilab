@@ -7,7 +7,8 @@ resource "google_artifact_registry_repository" "docker" {
   format        = "DOCKER"
 
   docker_config {
-    immutable_tags = true
+    # latestタグを保持するため、タグの不変性を無効にする
+    immutable_tags = false
   }
 
   cleanup_policies {
