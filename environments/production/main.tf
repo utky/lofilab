@@ -17,25 +17,26 @@ terraform {
 }
 
 provider "google" {
-  project = var.project_id
-  region  = var.region
+  project               = var.project_id
+  region                = var.region
   user_project_override = true
 
   default_labels = {
-    "environment" = "production",
-    "managed-by"  = "terraform"
+    "environment"       = "production",
+    "managed-by"        = "terraform"
+    "repo"              = "lofilab"
     "terraform-provier" = "google"
   }
 }
 
 provider "google-beta" {
-  project = var.project_id
-  region  = var.region
+  project               = var.project_id
+  region                = var.region
   user_project_override = true
 
   default_labels = {
-    "environment" = "production",
-    "managed-by"  = "terraform"
+    "environment"       = "production",
+    "managed-by"        = "terraform"
     "terraform-provier" = "google-beta"
   }
 }
@@ -64,8 +65,8 @@ module "service_api" {
 }
 
 module "firebase" {
-  source       = "../../modules/firebase"
-  project_id   = var.project_id
+  source     = "../../modules/firebase"
+  project_id = var.project_id
 }
 
 import {
