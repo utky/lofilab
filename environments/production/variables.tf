@@ -1,6 +1,7 @@
 variable "project_id" {
   type        = string
   description = "Google CloudのプロジェクトID"
+  default     = "lofilab"
 }
 
 variable "region" {
@@ -12,6 +13,10 @@ variable "region" {
 variable "github_repos" {
   description = "A list of GitHub repositories in the format of <owner>/<repository>"
   type        = list(string)
+  default = [
+    "utky/preschool-agent",
+    "utky/piyolog"
+  ]
 }
 
 variable "repository_id" {
