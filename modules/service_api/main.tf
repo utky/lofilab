@@ -24,7 +24,8 @@ resource "google_project_service" "main" {
     "bigquery.googleapis.com",
     "bigqueryconnection.googleapis.com",
     "monitoring.googleapis.com",
-    "documentai.googleapis.com"
+    "documentai.googleapis.com",
+    "drive.googleapis.com"
   ])
   service = each.key
 
